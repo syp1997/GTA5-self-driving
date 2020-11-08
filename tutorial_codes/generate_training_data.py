@@ -43,7 +43,7 @@ def main():
     last_time = time.time()
     while True:
         screen = grab_screen(region=(0,40,800,640))
-        screen = cv2.cvtColor(screen, cv2.COLOR_BGR2GRAY)
+        screen = cv2.cvtColor(screen, cv2.COLOR_RGB2GRAY)
         screen = cv2.resize(screen, (80,60))
         keys = key_check()
         output = keys_output(keys)
